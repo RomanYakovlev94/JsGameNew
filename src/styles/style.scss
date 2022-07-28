@@ -12,6 +12,10 @@ $max-h:850px;
 
 
 .root{
+    $min-w:450px;
+    $min-h:850px;
+    $max-w:450px;
+    $max-h:850px;
     box-sizing: border-box;
     color: $color-text;
     margin: 0 auto;
@@ -49,6 +53,7 @@ $max-h:850px;
             }
         }
         &__question{
+            align-items: center;
             display: flex;
             flex-direction: column;
             position: absolute;
@@ -56,7 +61,8 @@ $max-h:850px;
             top: 8px;
             left: 611px;
         }
-        &__question1{         //вторая страница вопросов
+        &__question1{   
+            align-items: center;      //вторая страница вопросов
             display: flex;
             flex-direction: column;
             position: absolute;
@@ -65,6 +71,9 @@ $max-h:850px;
             left: 611px;
         }
         &__answer{
+            align-items: center;
+            display: flex;
+            flex-direction: column;
             position: absolute;
             z-index: 5;
             top: 8px;
@@ -111,6 +120,10 @@ $max-h:850px;
     // }
 }
 
+.image-question{
+    max-width: 400px;
+    border-radius: 5px;
+}
 
 .animate{
     opacity: 1;

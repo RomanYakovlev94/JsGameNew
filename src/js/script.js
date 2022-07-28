@@ -220,7 +220,7 @@ btnReload.addEventListener('click', () => {
 
 objQuest[0] = {
     numQuest: "${randomNumber}",
-    question: "../src/img/questions/1.jpg",
+    question: "src/img/questions/1.jpg",
     a: "A: Lydia и undefined",
     b: "B: Lydia и ReferenceError",
     c: "C: ReferenceError и 21",
@@ -230,7 +230,7 @@ objQuest[0] = {
 }
 objQuest[1] = {
     numQuest: "${randomNumber}",
-    question: "../src/img/questions/2.jpg",
+    question: "src/img/questions/2.jpg",
     a: "A: 0 1 2 и 0 1 2",
     b: "B: 0 1 2 и 3 3 3",
     c: "C: 3 3 3 и 0 1 2",
@@ -240,7 +240,7 @@ objQuest[1] = {
 }
 objQuest[2] = {
     numQuest: "${randomNumber}",
-    question: "../src/img/questions/3.jpg",
+    question: "src/img/questions/3.jpg",
     a: "A: 20 и 62.83185307179586",
     b: "B: 20 и NaN",
     c: "C: 20 и 63",
@@ -250,7 +250,7 @@ objQuest[2] = {
 }
 objQuest[3] = {
     numQuest: "${randomNumber}",
-    question: "../src/img/questions/4.jpg",
+    question: "src/img/questions/4.jpg",
     a: "A: 1 и false",
     b: "B: false и NaN",
     c: "C: false и false",
@@ -260,7 +260,7 @@ objQuest[3] = {
 }
 objQuest[4] = {
     numQuest: "${randomNumber}",
-    question: "../src/img/questions/5.jpg",
+    question: "src/img/questions/5.jpg",
     a: "A: mouse.bird.size",
     b: "B: mouse[bird.size]",
     c: "C: mouse[bird[\"size\"]]",
@@ -270,7 +270,7 @@ objQuest[4] = {
 }
 objQuest[5] = {
     numQuest: "${randomNumber}",
-    question: "../src/img/questions/6.jpg",
+    question: "src/img/questions/6.jpg",
     a: "A: Hello",
     b: "B: Hey!",
     c: "C: undefined",
@@ -280,7 +280,7 @@ objQuest[5] = {
 }
 objQuest[6] = {
     numQuest: "${randomNumber}",
-    question: "../src/img/questions/7.jpg",
+    question: "src/img/questions/7.jpg",
     a: "A: true false true",
     b: "B: false false true",
     c: "C: true false false",
@@ -290,7 +290,7 @@ objQuest[6] = {
 }
 objQuest[7] = {
     numQuest: "${randomNumber}",
-    question: "../src/img/questions/8.jpg",
+    question: "src/img/questions/8.jpg",
     a: "A: orange",
     b: "B: purple",
     c: "C: green",
@@ -300,7 +300,7 @@ objQuest[7] = {
 }
 objQuest[8] = {
     numQuest: "${randomNumber}",
-    question: "../src/img/questions/9.jpg",
+    question: "src/img/questions/9.jpg",
     a: "A: {}",
     b: "B: ReferenceError: greetign is not defined",
     c: "C: undefined",
@@ -310,7 +310,7 @@ objQuest[8] = {
 }
 objQuest[9] = {
     numQuest: "${randomNumber}",
-    question: "../src/img/questions/10.jpg",
+    question: "src/img/questions/10.jpg",
     a: "A: Ничего, всё в порядке!",
     b: "B: SyntaxError",
     c: "C: undefined",
