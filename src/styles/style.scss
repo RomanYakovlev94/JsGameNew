@@ -18,6 +18,7 @@ $max-h:850px;
     color: $color-text;
     margin: 0 auto;
     .page{
+        box-sizing: border-box;
         flex: 1;
         border: 4px solid $color-text;
         border-radius: 3px;
@@ -36,7 +37,6 @@ $max-h:850px;
             display: flex;
             flex-direction: column;
             position: absolute;
-
             z-index: 8;
             &-hello-heading{
                 margin-top: 50px;
