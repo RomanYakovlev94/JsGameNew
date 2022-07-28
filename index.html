@@ -12,34 +12,38 @@
 </head>
 <body>
     <div class="root">
-        <div class="page page__start ">
+        <div class="page page__start animate" id="page__start1">
             <p class="page__start-hello-heading">Привествую тебя, дорогой друг!</p>
             <p class="page__start-hello-text">Ты находишься на странице умопомрачительной игры в викторину с углубленными вопросами по ванильному JavaScript! Вопросы с правильными ответами сохранятся в списке правильных ответов, а неправильные - попадутся еще раз. Приятной игры и обучения!</p>
-            <button class="btn btn__start">СТАРТУЕМ!</button>   
+            <button class="btn btn__start" id="btn__start1">СТАРТУЕМ!</button>   
         </div> 
-        <div class="page page__question page__hidden-right">
-            <p class="number-question"></p>
-            <img src="#" alt="#">
-            <button class="btn btn_a"></button>
-            <button class="btn btn_b"></button>
-            <button class="btn btn_c"></button>
-            <button class="btn btn_d"></button>
+        <div class="page page__question animate" id="page__question1">
+            <p class="number-question" id="ques-num"></p>
+            <img src="#" alt="photo-question" id="photo-question">
+            <button class="btn btn_a" id="a"></button>
+            <button class="btn btn_b" id="b"></button>
+            <button class="btn btn_c" id="c"></button>
+            <button class="btn btn_d" id="d"></button>
+            <button class="btn btn_reload" id="reload">Сменить билет</button>
+            <div class="page__scores">
+                <div class="page__scores-true">0</div>
+                <div class="page__scores-false">0</div>
+            </div>
+        </div> 
+        <div class="page page__answer animate" id="page__answer">
+            <p class="page__answer-hedding">РРАЗВЕРНУТОЕ ОБЪЯСНЕНИЕ</p>
+            <p class="page__answer-description"></p>
             <button class="btn btn_reload">Сменить билет</button>
             <div class="page__scores">
                 <div class="page__scores-true">0</div>
                 <div class="page__scores-false">0</div>
             </div>
         </div> 
-        <div class="page page__answer page__hidden-right">
-            <p class="page__answer-hedding">РРАЗВЕРНУТОЕ ОБЪЯСНЕНИЕ</p>
-            <p class="page__answer-description"></p>
-            <button class="btn btn_reload">Сменить билет</button>
-        </div> 
-        <div class="page page__finish page__hidden-right">
+        <div class="page page__finish animate" id="page__finish">
             <p class="page__finish-congratulations">Поздравляю, вы ответили правильно на все вопросы! Но совершенству нет предела! Попробуем еще?</p>
             <button class="btn btn-reset-all">Начать заново</button>
         </div> 
     </div>
-    <script src="/src/js/script.js"></script>
+    <script src="src/js/script.js"></script>
 </body>
 </html>
