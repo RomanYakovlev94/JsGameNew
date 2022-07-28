@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>JS Game </title>
+</head>
+<body>
+    <div class="root">
+        <div class="page page__start ">
+            <p class="page__start-hello-heading">Привествую тебя, дорогой друг!</p>
+            <p class="page__start-hello-text">Ты находишься на странице умопомрачительной игры в викторину с углубленными вопросами по ванильному JavaScript! Вопросы с правильными ответами сохранятся в списке правильных ответов, а неправильные - попадутся еще раз. Приятной игры и обучения!</p>
+            <button class="btn btn__start">СТАРТУЕМ!</button>   
+        </div> 
+        <div class="page page__question page__hidden-right">
+            <p class="number-question"></p>
+            <img src="#" alt="#">
+            <button class="btn btn_a"></button>
+            <button class="btn btn_b"></button>
+            <button class="btn btn_c"></button>
+            <button class="btn btn_d"></button>
+            <button class="btn btn_reload">Сменить билет</button>
+            <div class="page__scores">
+                <div class="page__scores-true">0</div>
+                <div class="page__scores-false">0</div>
+            </div>
+        </div> 
+        <div class="page page__answer page__hidden-right">
+            <p class="page__answer-hedding">РРАЗВЕРНУТОЕ ОБЪЯСНЕНИЕ</p>
+            <p class="page__answer-description"></p>
+            <button class="btn btn_reload">Сменить билет</button>
+        </div> 
+        <div class="page page__finish page__hidden-right">
+            <p class="page__finish-congratulations">Поздравляю, вы ответили правильно на все вопросы! Но совершенству нет предела! Попробуем еще?</p>
+            <button class="btn btn-reset-all">Начать заново</button>
+        </div> 
+    </div>
+    <script src="/src/js/script.js"></script>
+</body>
+</html>

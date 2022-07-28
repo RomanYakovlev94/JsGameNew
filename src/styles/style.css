@@ -1,0 +1,98 @@
+.root {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #B7DDEC;
+  margin: 0 auto;
+}
+
+.root .page {
+  border: 4px solid #B7DDEC;
+  -webkit-box-shadow: inset 0 0 15px #c2f6fc;
+          box-shadow: inset 0 0 15px #c2f6fc;
+  position: relative;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  min-width: 350px;
+  min-height: 600px;
+  max-width: 450px;
+  max-height: 850px;
+  background-color: #0f315b;
+}
+
+.root .page__start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  bottom: 0;
+  z-index: 1;
+}
+
+.root .page__start-hello-heading {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 25px;
+  color: #e9f6fb;
+  margin-bottom: 5px;
+}
+
+.root .page__start-hello-text {
+  padding: 25px;
+  text-align: center;
+  color: #B7DDEC;
+  font-family: "Roboto Slab", sans-serif;
+  line-height: 30px;
+}
+
+.root .page__question {
+  position: absolute;
+  z-index: 2;
+}
+
+.root .page__answer {
+  position: absolute;
+  z-index: 3;
+}
+
+.root .page__finish {
+  position: absolute;
+  z-index: 4;
+}
+
+.btn__start {
+  margin: auto auto 150px auto;
+  display: block;
+  color: #B7DDEC;
+  border: 5px solid #2A73BB;
+  border-radius: 1rem;
+  background: transparent;
+  font-size: 15px;
+  padding: 15px 60px;
+  font-family: "Roboto Slab", sans-serif;
+  position: relative;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 0 0.5em 0 #2A73BB, 0 0 0.5em 0 #2A73BB;
+          box-shadow: inset 0 0 0.5em 0 #2A73BB, 0 0 0.5em 0 #2A73BB;
+}
+
+.btn__start::before {
+  content: '';
+  position: absolute;
+  background: #2A73BB;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: perspective(1em) rotateX(40deg) scale(1, 0.3);
+          transform: perspective(1em) rotateX(40deg) scale(1, 0.3);
+  -webkit-filter: blur(1em);
+          filter: blur(1em);
+  bottom: -2em;
+  left: 0px;
+  opacity: 0.7;
+}
+/*# sourceMappingURL=style.css.map */

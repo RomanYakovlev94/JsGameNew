@@ -1,0 +1,95 @@
+$font-f: 'Roboto Slab', sans-serif;
+$color-b: #0f315b;
+$color-btn: #2A73BB;
+$color-text: #B7DDEC;
+$color-span: #e9f6fb;
+
+
+$min-w:350px;
+$min-h:600px;
+$max-w:450px;
+$max-h:850px;
+
+
+.root{
+    box-sizing: border-box;
+    color: $color-text;
+    margin: 0 auto;
+    .page{
+        border: 4px solid $color-text;
+        box-shadow: inset 0 0 15px rgb(194, 246, 252);
+        position: relative;
+        padding-bottom: 50px;
+        margin: 0 auto;
+        min-width: $min-w;
+        min-height: $min-h;
+        max-width: $max-w;
+        max-height: $max-h;
+        background-color: $color-b;
+        &__start{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            bottom: 0;
+            z-index: 1;
+            &-hello-heading{
+                margin-top: 50px;
+                text-align: center;
+                font-size: 25px;
+                color: $color-span;
+                margin-bottom: 5px;
+            }
+            &-hello-text{
+                padding: 25px;
+                text-align: center;
+                color: $color-text;
+                font-family: $font-f;
+                line-height: 30px;
+            }
+        }
+        &__question{
+            position: absolute;
+            z-index: 2;
+        }
+        &__answer{
+            position: absolute;
+            z-index: 3;
+        }
+        &__finish{
+            position: absolute;
+            z-index: 4;
+        }
+    }
+}
+
+// .btn{
+
+// }
+
+.btn__start{
+    margin: auto auto 150px auto;
+    display: block;
+    color: $color-text;
+    border: 5px solid $color-btn;
+    border-radius: 1rem;
+    background: transparent;
+    font-size: 15px;
+    padding: 15px 60px;
+    font-family: $font-f;
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0 0 0.5em 0 $color-btn, 0 0 0.5em 0 $color-btn;
+    &::before{
+        content: '';
+        position: absolute;
+        background: $color-btn;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        transform: perspective(1em) rotateX(40deg) scale(1, 0.3);
+        filter: blur(1em);
+        bottom: -2em;
+        left: 0px;
+        opacity: 0.7;
+    }
+}
