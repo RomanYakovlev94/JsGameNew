@@ -20,8 +20,8 @@
           box-shadow: inset 0 0 15px #c2f6fc;
   position: absolute;
   margin: 0 auto;
-  max-width: 450px;
-  max-height: 850px;
+  width: 450px;
+  height: 850px;
   background-color: #0f315b;
 }
 
