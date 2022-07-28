@@ -12,10 +12,8 @@ $max-h:850px;
 
 
 .root{
-    $min-w:450px;
-    $min-h:850px;
-    $max-w:450px;
-    $max-h:850px;
+    max-width: $max-w;
+    max-height: $max-h;
     box-sizing: border-box;
     color: $color-text;
     margin: 0 auto;
@@ -26,8 +24,8 @@ $max-h:850px;
         position: relative;
         padding-bottom: 50px;
         margin: 0 auto;
-        min-width: $min-w;
-        min-height: $min-h;
+        // min-width: $min-w;
+        // min-height: $min-h;
         max-width: $max-w;
         max-height: $max-h;
         background-color: $color-b;
