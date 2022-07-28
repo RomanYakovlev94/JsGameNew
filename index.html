@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -17,7 +17,8 @@
             <p class="page__start-hello-text">Ты находишься на странице умопомрачительной игры в викторину с углубленными вопросами по ванильному JavaScript! Вопросы с правильными ответами сохранятся в списке правильных ответов, а неправильные - попадутся еще раз. Приятной игры и обучения!</p>
             <button class="btn btn__start" id="btn__start1">СТАРТУЕМ!</button>   
         </div> 
-        <div class="page page__question animate" id="page__question1">
+        <!-- Первая страница вопросов -->
+        <div class="page page__question animate-hidden" id="page__question1">
             <p class="number-question" id="ques-num"></p>
             <img src="#" alt="photo-question" id="photo-question">
             <button class="btn btn_a" id="a"></button>
@@ -30,16 +31,31 @@
                 <div class="page__scores-false">0</div>
             </div>
         </div> 
-        <div class="page page__answer animate" id="page__answer">
-            <p class="page__answer-hedding">РРАЗВЕРНУТОЕ ОБЪЯСНЕНИЕ</p>
-            <p class="page__answer-description"></p>
-            <button class="btn btn_reload">Сменить билет</button>
+        <!-- Вторая страница вопросов -->
+        <div class="page page__question1 animate-hidden" id="page__question2">
+            <p class="number-question1" id="ques-num2"></p>
+            <img src="#" alt="photo-question" id="photo-question2">
+            <button class="btn btn_a" id="a2"></button>
+            <button class="btn btn_b" id="b2"></button>
+            <button class="btn btn_c" id="c2"></button>
+            <button class="btn btn_d" id="d2"></button>
+            <!-- <button class="btn btn_reload" id="reload2">Сменить билет</button> -->
             <div class="page__scores">
                 <div class="page__scores-true">0</div>
                 <div class="page__scores-false">0</div>
             </div>
         </div> 
-        <div class="page page__finish animate" id="page__finish">
+        <div class="page page__answer animate-hidden" id="page__answer1">
+            <p class="page__answer-hedding" id="answer-hedding">РАЗВЕРНУТОЕ ОБЪЯСНЕНИЕ</p>
+            <img src="#" alt="photo-question" id="photo-question-answer">
+            <p class="page__answer-description" id="answer-description"></p>
+            <button class="btn btn_reload-quest" id="reloadQuest">Следующий билет</button>
+            <div class="page__scores">
+                <div class="page__scores-true">0</div>
+                <div class="page__scores-false">0</div>
+            </div>
+        </div> 
+        <div class="page page__finish animate-hidden" id="page__finish1">
             <p class="page__finish-congratulations">Поздравляю, вы ответили правильно на все вопросы! Но совершенству нет предела! Попробуем еще?</p>
             <button class="btn btn-reset-all">Начать заново</button>
         </div> 

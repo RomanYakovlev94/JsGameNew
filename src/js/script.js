@@ -1,6 +1,5 @@
 const pageStart = document.getElementById('page__start1');
 const pageQuestion = document.getElementById('page__question1');
-const pageAnswer = document.getElementById('page__answer1');
 const pagefinish = document.getElementById('page__finish1');
 const startBtn = document.getElementById('btn__start1');
 const numberQuestion = document.getElementById('ques-num');
@@ -10,10 +9,30 @@ const ansBtnB = document.getElementById('b');
 const ansBtnC = document.getElementById('c');
 const ansBtnD = document.getElementById('d');
 const btnReload = document.getElementById('reload');
+
+//вторая страница вопросов
+
+const pageQuestion2 = document.getElementById('page__question2');
+const numberQuestion2 = document.getElementById('ques-num2');
+const imageQuestion2 = document.getElementById('photo-question2');
+const ansBtnA2 = document.getElementById('a2');
+const ansBtnB2 = document.getElementById('b2');
+const ansBtnC2 = document.getElementById('c2');
+const ansBtnD2 = document.getElementById('d2');
+//const btnReload2 = document.getElementById('reload2')
+
+//страница ответов
+const pageAnswer = document.getElementById('page__answer1');
+const imageQuestion3 = document.getElementById('photo-question-answer');
+const answerDescription = document.getElementById('answer-description');
+const btnReloadQuest = document.getElementById('reloadQuest');
+
+
 const objQuest = [];
 const arrAnswersTrue = [];
 
 let randomNumber = null;
+let randomNumber2 = null;
 let scoreTrue = 0;
 let scoreFalse = 0;
 
@@ -29,33 +48,170 @@ let sleep = (milliseconds) => {
 
 let renderQuestions = () => {
     randomNumber = Math.floor(Math.random() * objQuest.length);
+    if(arrAnswersTrue.includes(randomNumber)){
+        renderQuestions();
+    }else{
     numberQuestion.innerHTML = `Номер вопроса: ${randomNumber+1}`;
-    imageQuestion.src = `${objQuest[randomNumber].question}`
+    imageQuestion.src = `${objQuest[randomNumber].question}`;
     ansBtnA.innerHTML = `${objQuest[randomNumber].a}`;
-
     ansBtnB.innerHTML = `${objQuest[randomNumber].b}`;
-
     ansBtnC.innerHTML = `${objQuest[randomNumber].c}`;
-
     ansBtnD.innerHTML = `${objQuest[randomNumber].d}`;
+    }
+};
+let renderQuestions2 = () => {
+    randomNumber2 = Math.floor(Math.random() * objQuest.length);
+    if(arrAnswersTrue.includes(randomNumber2)){
+        renderQuestions2();
+    }else{
+    numberQuestion2.innerHTML = `Номер вопроса: ${randomNumber2+1}`;
+    imageQuestion2.src = `${objQuest[randomNumber2].question}`
+    ansBtnA2.innerHTML = `${objQuest[randomNumber2].a}`;
+    ansBtnB2.innerHTML = `${objQuest[randomNumber2].b}`;
+    ansBtnC2.innerHTML = `${objQuest[randomNumber2].c}`;
+    ansBtnD2.innerHTML = `${objQuest[randomNumber2].d}`;
+    }
+};
+let renderTrueAnswer = () => {
+    imageQuestion3.src = `${objQuest[randomNumber].question}`;
+    answerDescription.innerHTML = `${objQuest[randomNumber].answer}`
+    pageAnswer.classList.remove("animate-hidden");
+    pageAnswer.classList.add("animate");
 };
 
 startBtn.addEventListener('click', () => {
     renderQuestions();
+    pageQuestion.classList.remove("animate-hidden");
+    pageQuestion.classList.add("animate");
     pageStart.classList.remove("animate");
     pageStart.classList.add("animate-hidden");
-    // sleep(1000);
-    // zIndexChange();  
-    // document.getElementById('page__start1').style.zIndex = "1"; 
+});
+//кнопки ответов
+ansBtnA.addEventListener('click', () => {
+    if ("a" == objQuest[randomNumber].true){
+        scoreTrue += 1;
+        arrAnswersTrue.push(randomNumber);
+        renderTrueAnswer();
+        pageQuestion.classList.remove("animate");
+        pageQuestion.classList.add("animate-hidden");
+    }else{
+        scoreFalse +=1;
+        renderTrueAnswer();
+        pageQuestion.classList.remove("animate");
+        pageQuestion.classList.add("animate-hidden");
+    }
+});
+ansBtnB.addEventListener('click', () => {
+    if ("b" == objQuest[randomNumber].true){
+        scoreTrue += 1;
+        arrAnswersTrue.push(randomNumber);
+        renderTrueAnswer();
+        pageQuestion.classList.remove("animate");
+        pageQuestion.classList.add("animate-hidden");
+    }else{
+        scoreFalse +=1;
+        renderTrueAnswer();
+        pageQuestion.classList.remove("animate");
+        pageQuestion.classList.add("animate-hidden");
+    }
+});
+ansBtnC.addEventListener('click', () => {
+    if ("c" == objQuest[randomNumber].true){
+        scoreTrue += 1;
+        arrAnswersTrue.push(randomNumber);
+        renderTrueAnswer();
+        pageQuestion.classList.remove("animate");
+        pageQuestion.classList.add("animate-hidden");
+    }else{
+        scoreFalse +=1;
+        renderTrueAnswer();
+        pageQuestion.classList.remove("animate");
+        pageQuestion.classList.add("animate-hidden");
+    }
+});
+ansBtnD.addEventListener('click', () => {
+    if ("d" == objQuest[randomNumber].true){
+        scoreTrue += 1;
+        arrAnswersTrue.push(randomNumber);
+        renderTrueAnswer();
+        pageQuestion.classList.remove("animate");
+        pageQuestion.classList.add("animate-hidden");
+    }else{
+        scoreFalse +=1;
+        renderTrueAnswer();
+        pageQuestion.classList.remove("animate");
+        pageQuestion.classList.add("animate-hidden");
+    }
+});
+
+//кнопки ответов 2
+ansBtnA2.addEventListener('click', () => {
+    if ("a" == objQuest[randomNumber2].true){
+        scoreTrue += 1;
+        arrAnswersTrue.push(randomNumber2);
+        renderTrueAnswer();
+        pageQuestion2.classList.remove("animate");
+        pageQuestion2.classList.add("animate-hidden");
+    }else{
+        scoreFalse +=1;
+        renderTrueAnswer();
+        pageQuestion2.classList.remove("animate");
+        pageQuestion2.classList.add("animate-hidden");
+    }
+});
+ansBtnB2.addEventListener('click', () => {
+    if ("b" == objQuest[randomNumber2].true){
+        scoreTrue += 1;
+        arrAnswersTrue.push(randomNumber2);
+        renderTrueAnswer();
+        pageQuestion2.classList.remove("animate");
+        pageQuestion2.classList.add("animate-hidden");
+    }else{
+        scoreFalse +=1;
+        renderTrueAnswer();
+        pageQuestion2.classList.remove("animate");
+        pageQuestion2.classList.add("animate-hidden");
+    }
+});
+ansBtnC2.addEventListener('click', () => {
+    if ("c" == objQuest[randomNumber2].true){
+        scoreTrue += 1;
+        arrAnswersTrue.push(randomNumber2);
+        renderTrueAnswer();
+        pageQuestion2.classList.remove("animate");
+        pageQuestion2.classList.add("animate-hidden");
+    }else{
+        scoreFalse +=1;
+        renderTrueAnswer();
+        pageQuestion2.classList.remove("animate");
+        pageQuestion2.classList.add("animate-hidden");
+    }
+});
+ansBtnD2.addEventListener('click', () => {
+    if ("d" == objQuest[randomNumber2].true){
+        scoreTrue += 1;
+        arrAnswersTrue.push(randomNumber2);
+        renderTrueAnswer();
+        pageQuestion2.classList.remove("animate");
+        pageQuestion2.classList.add("animate-hidden");
+    }else{
+        scoreFalse +=1;
+        renderTrueAnswer();
+        pageQuestion2.classList.remove("animate");
+        pageQuestion2.classList.add("animate-hidden");
+    }
 });
 
 btnReload.addEventListener('click', () => {
+    renderQuestions();
     pageQuestion.classList.remove("animate");
     pageQuestion.classList.add("animate-hidden");
-    renderQuestions();
+    renderQuestions2();
+    pageQuestion2.classList.remove("animate-hidden");
+    pageQuestion2.classList.add("animate");
 });
 
-
+//дописать вторую страницу с вопросами, продумать логику смены слайдов, добавить счетчик, добавить страницу окончания игры
 
 
 

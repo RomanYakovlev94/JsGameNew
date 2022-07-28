@@ -5,8 +5,8 @@ $color-text: #B7DDEC;
 $color-span: #e9f6fb;
 
 
-$min-w:350px;
-$min-h:600px;
+$min-w:450px;
+$min-h:850px;
 $max-w:450px;
 $max-h:850px;
 
@@ -32,7 +32,7 @@ $max-h:850px;
             flex-direction: column;
             position: relative;
             bottom: 0;
-            z-index: 4;
+            z-index: 8;
             &-hello-heading{
                 margin-top: 50px;
                 text-align: center;
@@ -52,19 +52,27 @@ $max-h:850px;
             display: flex;
             flex-direction: column;
             position: absolute;
-            z-index: 3;
+            z-index: 7;
+            top: 8px;
+            left: 611px;
+        }
+        &__question1{         //вторая страница вопросов
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            z-index: 6;
             top: 8px;
             left: 611px;
         }
         &__answer{
             position: absolute;
-            z-index: 2;
+            z-index: 5;
             top: 8px;
             left: 611px;
         }
         &__finish{
             position: absolute;
-            z-index: 1;
+            z-index: 4;
             top: 8px;
             left: 611px;
         }
@@ -107,6 +115,7 @@ $max-h:850px;
 .animate{
     opacity: 1;
     visibility: visible;
+    transition: opacity 1s, visibility 1s;
     transition-delay: 0s;
 }
 .animate-hidden{
