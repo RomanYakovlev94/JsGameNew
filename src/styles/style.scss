@@ -12,17 +12,18 @@ $max-h:850px;
 
 
 .root{
+    display: flex;
     max-width: $max-w;
     max-height: $max-h;
-    box-sizing: border-box;
     color: $color-text;
     margin: 0 auto;
     .page{
+        flex: 1;
         border: 4px solid $color-text;
         border-radius: 3px;
         box-shadow: inset 0 0 15px rgb(194, 246, 252);
-        position: relative;
-        padding-bottom: 50px;
+        position: absolute;
+        // padding-bottom: 50px;
         margin: 0 auto;
         // min-width: $min-w;
         // min-height: $min-h;
@@ -30,10 +31,12 @@ $max-h:850px;
         max-height: $max-h;
         background-color: $color-b;
         &__start{
+            width: $max-w;
+            height: $max-h;
             display: flex;
             flex-direction: column;
-            position: relative;
-            bottom: 0;
+            position: absolute;
+
             z-index: 8;
             &-hello-heading{
                 margin-top: 50px;
@@ -56,8 +59,7 @@ $max-h:850px;
             flex-direction: column;
             position: absolute;
             z-index: 7;
-            top: 8px;
-            left: 611px;
+
         }
         &__question1{   
             align-items: center;      //вторая страница вопросов
@@ -65,8 +67,7 @@ $max-h:850px;
             flex-direction: column;
             position: absolute;
             z-index: 6;
-            top: 8px;
-            left: 611px;
+
         }
         &__answer{
             align-items: center;
@@ -74,14 +75,12 @@ $max-h:850px;
             flex-direction: column;
             position: absolute;
             z-index: 5;
-            top: 8px;
-            left: 611px;
+
         }
         &__finish{
             position: absolute;
             z-index: 4;
-            top: 8px;
-            left: 611px;
+
         }
     }
 }

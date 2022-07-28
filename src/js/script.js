@@ -211,6 +211,15 @@ btnReload.addEventListener('click', () => {
     pageQuestion2.classList.add("animate");
 });
 
+btnReloadQuest.addEventListener('click', () => {
+    renderQuestions();
+    pageAnswer.classList.remove("animate");
+    pageAnswer.classList.add("animate-hidden");
+    pageQuestion.classList.remove("animate-hidden");
+    pageQuestion.classList.add("animate");
+    
+});
+
 //дописать вторую страницу с вопросами, продумать логику смены слайдов, добавить счетчик, добавить страницу окончания игры
 
 
