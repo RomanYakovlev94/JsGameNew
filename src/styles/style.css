@@ -54,6 +54,8 @@
 }
 
 .root .page__question {
+  width: 450px;
+  height: 850px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -69,6 +71,8 @@
 }
 
 .root .page__question1 {
+  width: 450px;
+  height: 850px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -84,6 +88,8 @@
 }
 
 .root .page__answer {
+  width: 450px;
+  height: 850px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

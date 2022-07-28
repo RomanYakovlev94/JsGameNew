@@ -54,6 +54,8 @@ $max-h:850px;
             }
         }
         &__question{
+            width: $max-w;
+            height: $max-h;
             align-items: center;
             display: flex;
             flex-direction: column;
@@ -62,6 +64,8 @@ $max-h:850px;
 
         }
         &__question1{   
+            width: $max-w;
+            height: $max-h;
             align-items: center;      //вторая страница вопросов
             display: flex;
             flex-direction: column;
@@ -70,6 +74,8 @@ $max-h:850px;
 
         }
         &__answer{
+            width: $max-w;
+            height: $max-h;
             align-items: center;
             display: flex;
             flex-direction: column;

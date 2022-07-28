@@ -27,6 +27,7 @@ const imageQuestion3 = document.getElementById('photo-question-answer');
 const answerDescription = document.getElementById('answer-description');
 const btnReloadQuest = document.getElementById('reloadQuest');
 
+let allScoreTrueCollection = document.querySelectorAll(".page__scores-true")
 
 const objQuest = [];
 const arrAnswersTrue = [];
@@ -220,7 +221,7 @@ btnReloadQuest.addEventListener('click', () => {
     
 });
 
-//дописать вторую страницу с вопросами, продумать логику смены слайдов, добавить счетчик, добавить страницу окончания игры
+
 
 
 
