@@ -1,4 +1,6 @@
 .root {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,7 +59,7 @@
 }
 
 .root .page__start-jaba {
-  margin-top: 183px;
+  margin-top: 175px;
   margin-left: 50px;
 }
 
