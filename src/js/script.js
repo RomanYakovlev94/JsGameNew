@@ -28,6 +28,8 @@ const answerDescription = document.getElementById('answer-description');
 const btnReloadQuest = document.getElementById('reloadQuest');
 
 let allScoreTrueCollection = document.querySelectorAll(".page__scores-true")
+let allScoreFalseCollection = document.querySelectorAll(".page__scores-false")
+
 
 const objQuest = [];
 const arrAnswersTrue = [];
@@ -37,7 +39,7 @@ let randomNumber2 = null;
 let scoreTrue = 0;
 let scoreFalse = 0;
 
-
+allScoreTrueCollection.innerHTML = `${scoreTrue}`
 
 let sleep = (milliseconds) => {
     const date = Date.now();
@@ -58,6 +60,8 @@ let renderQuestions = () => {
     ansBtnB.innerHTML = `${objQuest[randomNumber].b}`;
     ansBtnC.innerHTML = `${objQuest[randomNumber].c}`;
     ansBtnD.innerHTML = `${objQuest[randomNumber].d}`;
+    funcTrueRender();
+    funcFalseRender();
     }
 };
 let renderQuestions2 = () => {
@@ -71,6 +75,8 @@ let renderQuestions2 = () => {
     ansBtnB2.innerHTML = `${objQuest[randomNumber2].b}`;
     ansBtnC2.innerHTML = `${objQuest[randomNumber2].c}`;
     ansBtnD2.innerHTML = `${objQuest[randomNumber2].d}`;
+    funcTrueRender();
+    funcFalseRender();
     }
 };
 let renderTrueAnswer = () => {
@@ -78,7 +84,21 @@ let renderTrueAnswer = () => {
     answerDescription.innerHTML = `${objQuest[randomNumber].answer}`
     pageAnswer.classList.remove("animate-hidden");
     pageAnswer.classList.add("animate");
+    funcTrueRender();
+    funcFalseRender();
 };
+
+let funcTrueRender = () => {
+    for (var i = 0; i < allScoreTrueCollection.length; i++) {
+        allScoreTrueCollection[i].innerHTML = `${scoreTrue}`;
+    }
+};
+let funcFalseRender = () => {
+    for (var i = 0; i < allScoreFalseCollection.length; i++) {
+        allScoreFalseCollection[i].innerHTML = `${scoreFalse}`;
+    }
+};
+
 
 startBtn.addEventListener('click', () => {
     renderQuestions();
@@ -276,7 +296,7 @@ objQuest[4] = {
     c: "C: mouse[bird[\"size\"]]",
     d: "D: Все варианты валидны",
     true: "a",
-    answer: "Ответ: A. В JavaScript все ключи объекта являются строками (кроме Symbol). И хотя мы не набираем их как строки, они всегда преобразовываются к строкам под капотом. JavaScript интерпретирует (или распаковывает) операторы. При использовании квадратных скобок JS замечает [ и продолжает пока не встретит ]. Только после этого он вычислит то, что находится внутри скобок. mouse[bird.size]: Сперва определяется bird.size, которое равно \"small\". mouse[\"small\"] возвращает true. Но с записью через точку так не происходит. У mouse нет ключа bird. Таким образом, mouse.bird равно undefined. Затем мы запрашиваем ключ size, используя точечную нотацию: mouse.bird.size. Так как mouse.bird это undefined, мы запрашиваем undefined.size. Это не является валидным, и мы получаем ошибку типа Cannot read property \"size\" of undefined."
+    answer: "Ответ: A. В JavaScript все ключи объекта являются строками (кроме Symbol). И хотя мы не набираем их как строки, они всегда преобразовываются к строкам под капотом. При использовании квадратных скобок JS замечает [ и продолжает пока не встретит ]. Только после этого он вычислит то, что находится внутри скобок. mouse[bird.size]: Сперва определяется bird.size, которое равно \"small\". mouse[\"small\"] возвращает true. Но с записью через точку так не происходит. У mouse нет ключа bird. Таким образом, mouse.bird равно undefined. Затем мы запрашиваем ключ size, используя точечную нотацию: mouse.bird.size. Так как mouse.bird это undefined, мы запрашиваем undefined.size. Это не является валидным, и мы получаем ошибку типа Cannot read property \"size\" of undefined."
 }
 objQuest[5] = {
     numQuest: "${randomNumber}",

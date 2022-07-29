@@ -16,15 +16,18 @@
             <p class="page__start-hello-heading">Привествую тебя, дорогой друг!</p>
             <p class="page__start-hello-text">Ты находишься на странице умопомрачительной игры в викторину с углубленными вопросами по ванильному JavaScript! Вопросы с правильными ответами сохранятся в списке правильных ответов, а неправильные - попадутся еще раз. Приятной игры и обучения!</p>
             <button class="btn btn__start" id="btn__start1">СТАРТУЕМ!</button>   
+            <img src="src/img/jabka.gif" class="page__start-jaba" alt="#" width="100px">
         </div> 
         <!-- Первая страница вопросов -->
         <div class="page page__question animate-hidden" id="page__question1">
             <p class="number-question" id="ques-num"></p>
             <img src="#" alt="photo-question" class="image-question" id="photo-question">
-            <button class="btn btn_a" id="a"></button>
-            <button class="btn btn_b" id="b"></button>
-            <button class="btn btn_c" id="c"></button>
-            <button class="btn btn_d" id="d"></button>
+            <div class="photo-question-btns">
+                <button class="btn btn_a" id="a"></button>
+                <button class="btn btn_b" id="b"></button>
+                <button class="btn btn_c" id="c"></button>
+                <button class="btn btn_d" id="d"></button>
+            </div>
             <button class="btn btn_reload" id="reload">Сменить билет</button>
             <div class="page__scores">
                 <div class="page__scores-true">0</div>
@@ -35,10 +38,12 @@
         <div class="page page__question1 animate-hidden" id="page__question2">
             <p class="number-question1" id="ques-num2"></p>
             <img src="#" alt="photo-question" class="image-question" id="photo-question2">
-            <button class="btn btn_a" id="a2"></button>
-            <button class="btn btn_b" id="b2"></button>
-            <button class="btn btn_c" id="c2"></button>
-            <button class="btn btn_d" id="d2"></button>
+            <div class="photo-question-btns">
+                <button class="btn btn_a" id="a2"></button>
+                <button class="btn btn_b" id="b2"></button>
+                <button class="btn btn_c" id="c2"></button>
+                <button class="btn btn_d" id="d2"></button>
+            </div>
             <!-- <button class="btn btn_reload" id="reload2">Сменить билет</button> -->
             <div class="page__scores">
                 <div class="page__scores-true">0</div>
