@@ -130,7 +130,7 @@ body {
 }
 
 .root .page__answer-description {
-  width: 90vw;
+  width: 85vw;
   height: 300px;
   overflow-y: scroll;
   text-align: center;
