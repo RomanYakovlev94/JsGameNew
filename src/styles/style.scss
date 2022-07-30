@@ -88,6 +88,7 @@ $max-h:850px;
         &__answer{
             max-width: $max-w;
             max-height: $max-h;
+            min-height: 100vw;
             align-items: center;
             display: flex;
             flex-direction: column;
