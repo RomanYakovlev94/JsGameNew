@@ -106,6 +106,8 @@ startBtn.addEventListener('click', () => {
     pageQuestion.classList.add("animate");
     pageStart.classList.remove("animate");
     pageStart.classList.add("animate-hidden");
+    scoreTrue = +localStorage.getItem('true');
+    scoreFalse = +localStorage.getItem('false');
 });
 //кнопки ответов
 ansBtnA.addEventListener('click', () => {
