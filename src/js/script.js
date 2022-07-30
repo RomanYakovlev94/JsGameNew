@@ -238,7 +238,10 @@ btnReloadQuest.addEventListener('click', () => {
     pageAnswer.classList.add("animate-hidden");
     pageQuestion.classList.remove("animate-hidden");
     pageQuestion.classList.add("animate");
-    
+    localStorage.setItem('true', scoreTrue);
+    localStorage.setItem('false', scoreFalse);
+    scoreTrue = +localStorage.getItem('true');
+    scoreFalse = +localStorage.getItem('false');
 });
 
 
