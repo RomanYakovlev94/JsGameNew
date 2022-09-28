@@ -47,7 +47,10 @@ let sleep = (milliseconds) => {
     do {
       currentDate = Date.now();
     } while (currentDate - date < milliseconds);
-  }
+}
+
+scoreTrue = +localStorage.getItem('true');
+scoreFalse = +localStorage.getItem('false');
 
 let renderQuestions = () => {
     randomNumber = Math.floor(Math.random() * objQuest.length);
