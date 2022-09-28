@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: 'Press Start 2P', sans-serif;
   font-weight: 400;
+  background-color: black;
 }
 
 .root {
@@ -23,10 +24,6 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  border: 4px solid #8396b6;
-  border-radius: 5px;
-  -webkit-box-shadow: inset 0 0 15px #958d8d;
-          box-shadow: inset 0 0 15px #958d8d;
   position: absolute;
   margin: 0 auto;
   max-width: 460px;
@@ -128,7 +125,7 @@ body {
 
 .root .page__answer-description {
   width: 85vw;
-  height: 200px;
+  height: 300px;
   overflow-y: scroll;
   text-align: center;
   font-size: 15px;
@@ -143,7 +140,7 @@ body {
   margin: 10px auto;
   display: block;
   color: #ffffff;
-  border: 5px solid #8396b6;
+  border: -1px solid #8396b6;
   border-radius: 1rem;
   background: transparent;
   font-size: 13px;
@@ -162,12 +159,12 @@ body {
 
 .btn_reload {
   position: absolute;
-  bottom: 35px;
+  bottom: 40px;
 }
 
 .btn_reload-quest {
   position: absolute;
-  bottom: 35px;
+  bottom: 40px;
 }
 
 .page__scores {
@@ -190,8 +187,8 @@ body {
 }
 
 .photo-question-btns {
-  position: relative;
-  bottom: 0px;
+  position: absolute;
+  bottom: 95px;
 }
 
 .page__scores {

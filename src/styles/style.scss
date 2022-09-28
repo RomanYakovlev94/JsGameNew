@@ -4,6 +4,7 @@ body{
     padding: 0;
     font-family: 'Press Start 2P', sans-serif;
     font-weight: 400;
+    background-color: rgb(0, 0, 0);
 }
 
 //$font-f: 'Roboto Slab', serif;
@@ -30,9 +31,9 @@ $max-h:100%;
     .page{
         box-sizing: border-box;
         flex: 1;
-        border: 4px solid rgb(131, 150, 182);
-        border-radius: 5px;
-        box-shadow: inset 0 0 15px rgb(149, 141, 141);
+        // border: 4px solid rgb(131, 150, 182);
+        // border-radius: 5px;
+        // box-shadow: inset 0 0 15px rgb(149, 141, 141);
         position: absolute;
         margin: 0 auto;
         max-width: $max-w;
@@ -108,7 +109,7 @@ $max-h:100%;
             }
             &-description{
                 width: 85vw;
-                height: 200px;
+                height: 300px;
                 overflow-y: scroll;
                 text-align: center;
                 font-size: 15px;
@@ -130,7 +131,7 @@ $max-h:100%;
     margin: 10px auto;
     display: block;
     color: $color-text;
-    border: 5px solid $color-btn;
+    border: -1px solid $color-btn;
     border-radius: 1rem;
     background: transparent;
     font-size: 13px;
@@ -160,11 +161,11 @@ $max-h:100%;
 }
 .btn_reload{
     position: absolute;
-    bottom: 35px;
+    bottom: 40px;
 }
 .btn_reload-quest{
     position: absolute;
-    bottom: 35px;
+    bottom: 40px;
 }
 .page__scores{
     position: absolute;
@@ -185,8 +186,8 @@ $max-h:100%;
 }
 
 .photo-question-btns{
-    position: relative;
-    bottom: 0px;
+    position: absolute;
+    bottom: 95px;
 }
 
 .page__scores{
