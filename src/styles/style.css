@@ -23,7 +23,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  border: 4px solid #665a5a;
+  border: 4px solid #8396b6;
   border-radius: 5px;
   -webkit-box-shadow: inset 0 0 15px #958d8d;
           box-shadow: inset 0 0 15px #958d8d;
@@ -31,16 +31,16 @@ body {
   margin: 0 auto;
   max-width: 460px;
   max-height: 100%;
-  min-height: 685px;
+  min-height: 100%;
   min-width: 100vw;
   background-color: #1A1A1D;
-  background-image: url(/src/img/bg1.gif);
+  background-image: url("../img/bg1.gif");
 }
 
 .root .page__start {
   max-width: 460px;
   max-height: 100%;
-  min-height: 685px;
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,7 +122,7 @@ body {
 
 .root .page__answer-hedding {
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   color: #e9f6fb;
 }
 
@@ -141,7 +141,7 @@ body {
   margin: 15px auto;
   display: block;
   color: #ffffff;
-  border: 5px solid #363434;
+  border: 5px solid #8396b6;
   border-radius: 1rem;
   background: transparent;
   font-size: 13px;
@@ -149,16 +149,23 @@ body {
   font-family: "Press Start 2P", sans-serif;
   position: relative;
   cursor: pointer;
-  -webkit-box-shadow: inset 0 0 0.5em 0 #363434, 0 0 0.5em 0 #363434;
-          box-shadow: inset 0 0 0.5em 0 #363434, 0 0 0.5em 0 #363434;
+  -webkit-box-shadow: inset 0 0 0.5em 0 #8396b6, 0 0 0.5em 0 #8396b6;
+          box-shadow: inset 0 0 0.5em 0 #8396b6, 0 0 0.5em 0 #8396b6;
 }
 
 .btn__start {
   margin-top: 50px;
+  width: 200px;
 }
 
 .btn_reload {
-  margin-top: 0px;
+  position: absolute;
+  bottom: 35px;
+}
+
+.btn_reload-quest {
+  position: absolute;
+  bottom: 35px;
 }
 
 .page__scores {
