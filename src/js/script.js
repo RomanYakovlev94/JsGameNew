@@ -32,8 +32,7 @@ let allScoreFalseCollection = document.querySelectorAll(".page__scores-false")
 
 
 const objQuest = [];
-const arrAnswersTrue = [];
-
+let arrAnswersTrue = [];
 let randomNumber = null;
 let randomNumber2 = null;
 let scoreTrue = 0;
@@ -51,6 +50,7 @@ let sleep = (milliseconds) => {
 
 scoreTrue = +localStorage.getItem('true');
 scoreFalse = +localStorage.getItem('false');
+
 
 let renderQuestions = () => {
     randomNumber = Math.floor(Math.random() * objQuest.length);
@@ -111,6 +111,7 @@ startBtn.addEventListener('click', () => {
     pageStart.classList.add("animate-hidden");
     scoreTrue = +localStorage.getItem('true');
     scoreFalse = +localStorage.getItem('false');
+    arrAnswersTrue = JSON.parse(localStorage.getItem('arrayTrueAnswers'));
 });
 //кнопки ответов
 ansBtnA.addEventListener('click', () => {
@@ -245,8 +246,10 @@ btnReloadQuest.addEventListener('click', () => {
     pageQuestion.classList.add("animate");
     localStorage.setItem('true', scoreTrue);
     localStorage.setItem('false', scoreFalse);
+    localStorage.setItem('arrayTrueAnswers', JSON.stringify(arrAnswersTrue));
     scoreTrue = +localStorage.getItem('true');
     scoreFalse = +localStorage.getItem('false');
+    arrAnswersTrue = JSON.parse(localStorage.getItem('arrayTrueAnswers'));
 });
 
 
