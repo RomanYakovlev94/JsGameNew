@@ -2,6 +2,7 @@ const pageStart = document.getElementById('page__start1');
 const pageQuestion = document.getElementById('page__question1');
 const pagefinish = document.getElementById('page__finish1');
 const startBtn = document.getElementById('btn__start1');
+const restartBtn = document.getElementById('btn__restart1');
 const numberQuestion = document.getElementById('ques-num');
 const imageQuestion = document.getElementById('photo-question');
 const ansBtnA = document.getElementById('a');
@@ -112,6 +113,17 @@ startBtn.addEventListener('click', () => {
     scoreTrue = +localStorage.getItem('true');
     scoreFalse = +localStorage.getItem('false');
     arrAnswersTrue = JSON.parse(localStorage.getItem('arrayTrueAnswers'));
+});
+restartBtn.addEventListener('click', () => {
+    scoreTrue = 0;
+    scoreFalse = 0;
+    arrAnswersTrue = [];
+    renderQuestions();
+    pageQuestion.classList.remove("animate-hidden");
+    pageQuestion.classList.add("animate");
+    pageStart.classList.remove("animate");
+    pageStart.classList.add("animate-hidden");
+
 });
 //кнопки ответов
 ansBtnA.addEventListener('click', () => {
