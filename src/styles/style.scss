@@ -2,13 +2,13 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Press Start 2P', sans-serif;
+    font-family:  'M PLUS 1p', sans-serif;
     font-weight: 400;
     background-color: rgb(0, 0, 0);
 }
 
 //$font-f: 'Roboto Slab', serif;
-$font-f: 'Press Start 2P', sans-serif;
+$font-f: 'M PLUS 1p', sans-serif;
 $color-b: #1A1A1D;
 $color-btn: rgb(131, 150, 182);
 $color-text: #ffffff;
@@ -53,18 +53,21 @@ $max-h:100%;
             &-hello-heading{
                 margin: 60px auto 0 auto;
                 text-align: center;
-                font-size: 16px;
-                line-height: 20px;
+                font-size: 25px;
+                line-height: 30px;
+                font-weight: 600;
+                letter-spacing: 3px;
                 color: $color-span;
             }
             &-hello-text{
-                margin-top: 45px;
+                margin-top: 30px;
                 padding: 25px;
                 text-align: center;
                 color: $color-text;
                 font-family: $font-f;
-                line-height: 23px;
-                font-size: 15px;
+                line-height: 25px;
+                font-size: 17px;
+                font-weight: 500;
             }
             &-jaba{
                 // margin-top: 175px;
@@ -104,15 +107,19 @@ $max-h:100%;
             // z-index: 5;
             &-hedding{
                 text-align: center;
-                font-size: 15px;
+                font-size: 16px;
+                font-weight: 600;
+                margin: 10px;
                 color: $color-span;
             }
             &-description{
+                margin: 0;
                 width: 85vw;
-                height: 300px;
+                height: 200px;
                 overflow-y: scroll;
                 text-align: center;
-                font-size: 15px;
+                font-size: 16px;
+                font-weight: 500;
                 line-height: 23px;
                 color: $color-span;
                 padding: 0 25px;
@@ -131,10 +138,11 @@ $max-h:100%;
     margin: 10px auto;
     display: block;
     color: $color-text;
-    border: -1px solid $color-btn;
+    border: 1px solid $color-btn;
     border-radius: 1rem;
     background: transparent;
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: 600;
     padding: 10px 40px;
     font-family: $font-f;
     position: relative;
@@ -156,7 +164,7 @@ $max-h:100%;
 }
 
 .btn__start{
-    margin-top: 50px;
+    margin-top: 10px;
     width: 200px;
 }
 .btn_reload{
@@ -173,7 +181,9 @@ $max-h:100%;
 }
 .number-question{
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px;
     color: $color-span;
     text-transform: uppercase;
 }
