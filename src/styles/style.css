@@ -132,6 +132,8 @@ body {
   margin: 0;
   width: 85vw;
   height: 200px;
+  position: absolute;
+  bottom: 115px;
   overflow-y: scroll;
   text-align: center;
   font-size: 16px;
