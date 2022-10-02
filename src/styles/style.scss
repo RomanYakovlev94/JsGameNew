@@ -17,13 +17,14 @@ $color-span: #e9f6fb;
 
 $min-w:100vw;
 $min-h:100%;
-$max-w:460px;
+$max-w:425px;
 $max-h:100%;
 
 
 .root{
     box-sizing: border-box;
     display: flex;
+    justify-content: center;
     max-width: $max-w;
     max-height: $max-h;
     color: $color-text;
@@ -42,6 +43,8 @@ $max-h:100%;
         min-width: $min-w;
         background-color: $color-b;
         background-image: url("../img/bg1.gif");
+        // background-size: cover;
+        // background-repeat: no-repeat;
         &__start{
             max-width: $max-w;
             max-height: $max-h;
@@ -60,7 +63,8 @@ $max-h:100%;
                 color: $color-span;
             }
             &-hello-text{
-                margin-top: 30px;
+                max-width: 415px;
+                margin: 30px auto 0 auto;
                 padding: 25px;
                 text-align: center;
                 color: $color-text;
@@ -99,7 +103,7 @@ $max-h:100%;
         &__answer{
             max-width: $max-w;
             max-height: $max-h;
-            min-height: 100%;
+            min-height: $min-h;
             align-items: center;
             display: flex;
             flex-direction: column;
@@ -115,6 +119,7 @@ $max-h:100%;
             &-description{
                 margin: 0;
                 width: 85vw;
+                max-width: 415px;
                 height: 200px;
                 position: absolute;
                 bottom: 115px;
@@ -196,6 +201,7 @@ $max-h:100%;
 
 .image-question{
     width: 90vw;
+    max-width: 400px;
     margin: 0 auto;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -239,12 +245,19 @@ $max-h:100%;
 }
 
 
-@media(max-width: 321px){
-    .page__start-hello-heading{
-        margin-top: 65px !important;
-        margin-bottom: 0px !important;
-    }
-    .page__start-hello-text{
-        margin-top: 0px !important;
-    }
+// @media(max-width: 321px){
+//     .page__start-hello-heading{
+//         margin-top: 65px !important;
+//         margin-bottom: 0px !important;
+//     }
+//     .page__start-hello-text{
+//         margin-top: 0px !important;
+//     }
+// }
+
+@media(min-width: 426px){
+    $min-w:4666px !important;
+    $min-h:100%;
+    $max-w:425px;
+    $max-h:100%;
 }

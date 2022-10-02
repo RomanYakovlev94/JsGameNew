@@ -39,19 +39,16 @@ let randomNumber2 = null;
 let scoreTrue = 0;
 let scoreFalse = 0;
 
-allScoreTrueCollection.innerHTML = `${scoreTrue}`
-
-let sleep = (milliseconds) => {
-    const date = Date.now();
-    let currentDate = null;
-    do {
-      currentDate = Date.now();
-    } while (currentDate - date < milliseconds);
-}
+// let sleep = (milliseconds) => {
+//     const date = Date.now();
+//     let currentDate = null;
+//     do {
+//       currentDate = Date.now();
+//     } while (currentDate - date < milliseconds);
+// }
 
 scoreTrue = +localStorage.getItem('true');
 scoreFalse = +localStorage.getItem('false');
-
 
 let renderQuestions = () => {
     randomNumber = Math.floor(Math.random() * objQuest.length);
@@ -68,6 +65,7 @@ let renderQuestions = () => {
     funcFalseRender();
     }
 };
+
 let renderQuestions2 = () => {
     randomNumber2 = Math.floor(Math.random() * objQuest.length);
     if(arrAnswersTrue.includes(randomNumber2)){
@@ -83,6 +81,7 @@ let renderQuestions2 = () => {
     funcFalseRender();
     }
 };
+
 let renderTrueAnswer = () => {
     imageQuestion3.src = `${objQuest[randomNumber].question}`;
     answerDescription.innerHTML = `${objQuest[randomNumber].answer}`
@@ -97,6 +96,7 @@ let funcTrueRender = () => {
         allScoreTrueCollection[i].innerHTML = `${scoreTrue}`;
     }
 };
+
 let funcFalseRender = () => {
     for (var i = 0; i < allScoreFalseCollection.length; i++) {
         allScoreFalseCollection[i].innerHTML = `${scoreFalse}`;
@@ -105,15 +105,18 @@ let funcFalseRender = () => {
 
 
 startBtn.addEventListener('click', () => {
+    if(+localStorage.getItem('true')){
+        scoreTrue = +localStorage.getItem('true');
+        scoreFalse = +localStorage.getItem('false');
+        arrAnswersTrue = JSON.parse(localStorage.getItem('arrayTrueAnswers'));
+    }    
     renderQuestions();
     pageQuestion.classList.remove("animate-hidden");
     pageQuestion.classList.add("animate");
     pageStart.classList.remove("animate");
     pageStart.classList.add("animate-hidden");
-    scoreTrue = +localStorage.getItem('true');
-    scoreFalse = +localStorage.getItem('false');
-    arrAnswersTrue = JSON.parse(localStorage.getItem('arrayTrueAnswers'));
 });
+
 restartBtn.addEventListener('click', () => {
     scoreTrue = 0;
     scoreFalse = 0;
@@ -125,6 +128,30 @@ restartBtn.addEventListener('click', () => {
     pageStart.classList.add("animate-hidden");
 
 });
+
+btnReload.addEventListener('click', () => {
+    renderQuestions();
+    pageQuestion.classList.remove("animate");
+    pageQuestion.classList.add("animate-hidden");
+    renderQuestions2();
+    pageQuestion2.classList.remove("animate-hidden");
+    pageQuestion2.classList.add("animate");
+});
+
+btnReloadQuest.addEventListener('click', () => {
+    renderQuestions();
+    pageAnswer.classList.remove("animate");
+    pageAnswer.classList.add("animate-hidden");
+    pageQuestion.classList.remove("animate-hidden");
+    pageQuestion.classList.add("animate");
+    localStorage.setItem('true', scoreTrue);
+    localStorage.setItem('false', scoreFalse);
+    localStorage.setItem('arrayTrueAnswers', JSON.stringify(arrAnswersTrue));
+    scoreTrue = +localStorage.getItem('true');
+    scoreFalse = +localStorage.getItem('false');
+    arrAnswersTrue = JSON.parse(localStorage.getItem('arrayTrueAnswers'));
+});
+
 //кнопки ответов
 ansBtnA.addEventListener('click', () => {
     if ("a" == objQuest[randomNumber].true){
@@ -140,6 +167,7 @@ ansBtnA.addEventListener('click', () => {
         pageQuestion.classList.add("animate-hidden");
     }
 });
+
 ansBtnB.addEventListener('click', () => {
     if ("b" == objQuest[randomNumber].true){
         scoreTrue += 1;
@@ -154,6 +182,7 @@ ansBtnB.addEventListener('click', () => {
         pageQuestion.classList.add("animate-hidden");
     }
 });
+
 ansBtnC.addEventListener('click', () => {
     if ("c" == objQuest[randomNumber].true){
         scoreTrue += 1;
@@ -168,6 +197,7 @@ ansBtnC.addEventListener('click', () => {
         pageQuestion.classList.add("animate-hidden");
     }
 });
+
 ansBtnD.addEventListener('click', () => {
     if ("d" == objQuest[randomNumber].true){
         scoreTrue += 1;
@@ -198,6 +228,7 @@ ansBtnA2.addEventListener('click', () => {
         pageQuestion2.classList.add("animate-hidden");
     }
 });
+
 ansBtnB2.addEventListener('click', () => {
     if ("b" == objQuest[randomNumber2].true){
         scoreTrue += 1;
@@ -212,6 +243,7 @@ ansBtnB2.addEventListener('click', () => {
         pageQuestion2.classList.add("animate-hidden");
     }
 });
+
 ansBtnC2.addEventListener('click', () => {
     if ("c" == objQuest[randomNumber2].true){
         scoreTrue += 1;
@@ -226,6 +258,7 @@ ansBtnC2.addEventListener('click', () => {
         pageQuestion2.classList.add("animate-hidden");
     }
 });
+
 ansBtnD2.addEventListener('click', () => {
     if ("d" == objQuest[randomNumber2].true){
         scoreTrue += 1;
@@ -241,28 +274,6 @@ ansBtnD2.addEventListener('click', () => {
     }
 });
 
-btnReload.addEventListener('click', () => {
-    renderQuestions();
-    pageQuestion.classList.remove("animate");
-    pageQuestion.classList.add("animate-hidden");
-    renderQuestions2();
-    pageQuestion2.classList.remove("animate-hidden");
-    pageQuestion2.classList.add("animate");
-});
-
-btnReloadQuest.addEventListener('click', () => {
-    renderQuestions();
-    pageAnswer.classList.remove("animate");
-    pageAnswer.classList.add("animate-hidden");
-    pageQuestion.classList.remove("animate-hidden");
-    pageQuestion.classList.add("animate");
-    localStorage.setItem('true', scoreTrue);
-    localStorage.setItem('false', scoreFalse);
-    localStorage.setItem('arrayTrueAnswers', JSON.stringify(arrAnswersTrue));
-    scoreTrue = +localStorage.getItem('true');
-    scoreFalse = +localStorage.getItem('false');
-    arrAnswersTrue = JSON.parse(localStorage.getItem('arrayTrueAnswers'));
-});
 
 
 
